@@ -128,3 +128,7 @@ a:hover img {
     border-bottom: 1px solid #9d9d9d;
     display: block;
 }
+.split_50_img_text {
+  display: inline-block;
+  width: 49%;
+}

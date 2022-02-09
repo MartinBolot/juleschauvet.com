@@ -1,0 +1,24 @@
+SetEnv PHP_VER 5
+
+RewriteEngine On
+
+# add "www"
+RewriteCond %{HTTP_HOST} !^www\.juleschauvet\.com [NC]
+RewriteRule (.*) http://www.juleschauvet.com/$1 [QSA,R=301,L]
+
+# redirect http to https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
+
+# 404
+ErrorDocument 404 https://www.juleschauvet.com
+
+# MIME types
+AddType text/html .html .htm
+AddType text/plain .txt
+AddType text/css .css
+AddType image/gif .gif .GIF
+AddType image/jpeg .jpg .JPG
+AddType image/tiff .tiff .tif
+AddType application/javascript js jsonp
+AddType application/json json
