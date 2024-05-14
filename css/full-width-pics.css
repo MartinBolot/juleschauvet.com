@@ -113,14 +113,20 @@ figcaption {
 .full_size_img {
     max-width: 100%;
 }
-.bloc_actu {
-    margin: 0 0 40px;
-}
 a img {
     transition: opacity 0.2s ease-in 0s;
 }
 a:hover img {
     opacity: 0.8;
+}
+.split_50_img_text {
+  display: inline-block;
+  width: 49%;
+}
+
+/* bloc actu */
+.bloc_actu {
+    margin: 0 0 40px;
 }
 .bloc_actu::after {
     content: "";
@@ -128,7 +134,14 @@ a:hover img {
     border-bottom: 1px solid #9d9d9d;
     display: block;
 }
-.split_50_img_text {
-  display: inline-block;
-  width: 49%;
+
+/* bloc livre */
+.bloc_livre {
+    margin: 0 0 40px;
+}
+.bloc_livre::after {
+    content: "";
+    width: 100px;
+    border-bottom: 1px solid #9d9d9d;
+    display: block;
 }
